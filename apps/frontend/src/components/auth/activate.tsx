@@ -7,6 +7,7 @@ import { Button } from '@gitroom/react/form/button';
 import { Input } from '@gitroom/react/form/input';
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 
 type ResendInputs = {
   email: string;
@@ -153,6 +154,7 @@ export function Activate() {
           </p>
         )}
       </div>
+      <LegalLinks className="mt-4 text-[12px] text-[#C7C7C7] block" />
     </div>
   );
 }

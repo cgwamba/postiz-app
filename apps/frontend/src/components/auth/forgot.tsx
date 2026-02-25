@@ -9,6 +9,7 @@ import { useMemo, useState } from 'react';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { ForgotPasswordDto } from '@gitroom/nestjs-libraries/dtos/auth/forgot.password.dto';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 type Inputs = {
   email: string;
 };
@@ -88,6 +89,7 @@ export function Forgot() {
           )}
         </form>
       </FormProvider>
+      <LegalLinks className="mt-4 text-[12px] text-[#C7C7C7] block" />
     </div>
   );
 }

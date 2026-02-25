@@ -15,6 +15,7 @@ import { useVariables } from '@gitroom/react/helpers/variable.context';
 import { FarcasterProvider } from '@gitroom/frontend/components/auth/providers/farcaster.provider';
 import WalletProvider from '@gitroom/frontend/components/auth/providers/wallet.provider';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 type Inputs = {
   email: string;
   password: string;
@@ -150,6 +151,7 @@ export function Login() {
                     {t('forgot_password', 'Forgot password')}
                   </Link>
                 </p>
+                <LegalLinks className="mt-4 text-[12px] text-[#C7C7C7] block" />
               </div>
             </div>
           </div>

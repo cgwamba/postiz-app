@@ -6,6 +6,7 @@ import Image from 'next/image';
 import loadDynamic from 'next/dynamic';
 import { TestimonialComponent } from '@gitroom/frontend/components/auth/testimonial.component';
 import { LogoTextComponent } from '@gitroom/frontend/components/ui/logo-text.component';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 const ReturnUrlComponent = loadDynamic(() => import('./return.url.component'));
 export default async function AuthLayout({
   children,
@@ -22,6 +23,7 @@ export default async function AuthLayout({
         <div className="w-full max-w-[440px] mx-auto justify-center gap-[20px] h-full flex flex-col text-white">
           <LogoTextComponent />
           <div className="flex">{children}</div>
+          <LegalLinks className="mt-4 text-[12px] text-[#C7C7C7] block" />
         </div>
       </div>
       <div className="text-[36px] flex-1 pt-[88px] hidden lg:flex flex-col items-center">

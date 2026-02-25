@@ -8,6 +8,7 @@ import { useMemo, useState } from 'react';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { ForgotReturnPasswordDto } from '@gitroom/nestjs-libraries/dtos/auth/forgot-return.password.dto';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 type Inputs = {
   password: string;
   repeatPassword: string;
@@ -103,6 +104,7 @@ export function ForgotReturn({ token }: { token: string }) {
           </>
         )}
       </form>
+      <LegalLinks className="mt-4 text-[12px] text-[#C7C7C7] block" />
     </FormProvider>
   );
 }

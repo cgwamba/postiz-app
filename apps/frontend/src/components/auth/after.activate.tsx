@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import useCookie from 'react-use-cookie';
+import { LegalLinks } from '@gitroom/frontend/components/auth/legal.links';
 export const AfterActivate = () => {
   const fetch = useFetch();
   const params = useParams();
@@ -45,16 +46,19 @@ export const AfterActivate = () => {
       {showLoader ? (
         <LoadingComponent />
       ) : (
-        <>
-          This user is already activated,
-          <br />
-          <Link href="/auth/login" className="underline">
-            {t(
-              'click_here_to_go_back_to_login',
-              'Click here to go back to login'
-            )}
-          </Link>
-        </>
+        <div className="flex flex-col gap-4">
+          <div>
+            This user is already activated,
+            <br />
+            <Link href="/auth/login" className="underline">
+              {t(
+                'click_here_to_go_back_to_login',
+                'Click here to go back to login'
+              )}
+            </Link>
+          </div>
+          <LegalLinks className="text-[12px] text-[#C7C7C7] block" />
+        </div>
       )}
     </>
   );
