@@ -34,7 +34,7 @@ services:
       CLOUDFLARE_REGION: "${CLOUDFLARE_REGION}"
 
       # === Social Media API Settings
-      # === Social Media API Settings
+      # === Social Media API Settings 
       X_API_KEY: ${X_API_KEY}
       X_API_SECRET: ${X_API_SECRET}
 
